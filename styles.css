@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background-color: green;
+    background-color: pink;
     overflow: hidden;
 }
 
@@ -16,7 +16,7 @@ body {
     --position: 50;
 
     position: absolute;
-    background-color: black;
+    background-color: white;
     /* using vh to obtain even sizes of different screens */
     top: calc(var(--position) * 1vh);
     transform: translateY(-50%);
@@ -37,7 +37,7 @@ body {
     --y: 50;
 
     position: absolute;
-    background-color: rgb(222, 96, 96);
+    background-color: rgb(0, 0, 0);
     left: calc(var(--x) * 1vw);
     top: calc(var(--y) * 1vh);
     border-radius: 50%;
