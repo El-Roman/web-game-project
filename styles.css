@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background-color: pink;
+    background-color: #27446e39;
     overflow: hidden;
 }
 
@@ -22,14 +22,26 @@ body {
     transform: translateY(-50%);
     width: 1vh;
     height: 10vh;
+    /* box-shadow:
+        0 0 60px 10px #fff,
+        0 0 100px 60px #f0f,
+        0 0 140px 90px #0ff; */
 }
 
 .paddle.left {
     left: 1vw;
+    box-shadow:
+        0 0 60px 10px #fff,
+        0 0 100px 60px rgb(0, 4, 255),
+        0 0 140px 90px rgba(8, 0, 255, 0.389);
 }
 
 .paddle.right {
     right: 1vw;
+    box-shadow:
+        0 0 60px 10px #fff,
+        0 0 100px 60px rgb(255, 0, 30),
+        0 0 140px 90px rgb(255, 0, 0);
 }
 
 .ball {
@@ -37,7 +49,7 @@ body {
     --y: 50;
 
     position: absolute;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 8);
     left: calc(var(--x) * 1vw);
     top: calc(var(--y) * 1vh);
     border-radius: 50%;
@@ -64,4 +76,13 @@ body {
 
 .score> :first-child {
     text-align: right;
+}
+
+
+html {
+    background: url(/images/star\ wars\ death\ star\ wallpaper.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

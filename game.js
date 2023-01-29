@@ -38,6 +38,18 @@ function handleLose() {
     computerPaddle.reset()
 }
 
+// game win condition
+
+function gameWin() {
+    if (playerScoreElem === 3) {
+        const newDiv = document.createElement("div");
+        const newContent = document.createTextNode("You win!");
+        newDiv.appendChild(newContent);
+        const currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+    }
+}
+
 
 // mouse movement controls player paddle
 document.addEventListener("mousemove", e => {
