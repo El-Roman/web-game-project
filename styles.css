@@ -22,16 +22,13 @@ body {
     transform: translateY(-50%);
     width: 1vh;
     height: 10vh;
-    /* box-shadow:
-        0 0 60px 10px #fff,
-        0 0 100px 60px #f0f,
-        0 0 140px 90px #0ff; */
+   
 }
 
 .paddle.left {
     left: 1vw;
     box-shadow:
-        0 0 60px 10px #fff,
+        0 0 60px 10px #ffffff,
         0 0 100px 60px rgb(0, 4, 255),
         0 0 140px 90px rgba(8, 0, 255, 0.389);
 }
