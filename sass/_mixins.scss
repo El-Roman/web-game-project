@@ -1,0 +1,30 @@
+// Mixins
+@mixin box-shadow($shadows...) {
+    box-shadow: $shadows;
+}
+
+@mixin paddle-styling($offset, $shadows...) {
+    position: absolute;
+    background-color: white;
+    top: calc(#{$position} * 1vh);
+    transform: translateY(-50%);
+    width: 1vh;
+    height: 10vh;
+
+    @if $offset ==left {
+        left: $left-offset;
+    }
+
+    @else if $offset ==right {
+        right: $right-offset;
+    }
+
+    @include box-shadow($shadows);
+}
+
+@mixin score-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+}

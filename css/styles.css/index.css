@@ -1,0 +1,87 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(39, 68, 110, 0.2235294118);
+  overflow: hidden;
+}
+
+.paddle {
+  position: absolute;
+  background-color: white;
+  top: calc(50 * 1vh);
+  transform: translateY(-50%);
+  width: 1vh;
+  height: 10vh;
+  box-shadow: 0 0 60px 10px #ffffff, 0 0 100px 60px rgb(0, 4, 255), 0 0 140px 90px rgba(8, 0, 255, 0.389);
+}
+
+.paddle.left {
+  left: 1vw;
+}
+
+.paddle.right {
+  right: 1vw;
+  box-shadow: 0 0 60px 10px #fff, 0 0 100px 60px rgb(255, 0, 30), 0 0 140px 90px rgb(255, 0, 0);
+}
+
+.ball {
+  position: absolute;
+  background-color: rgb(255, 0, 8);
+  left: calc(50 * 1vw);
+  top: calc(50 * 1vw);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 7vh;
+  color: white;
+}
+.score > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 2vh;
+  margin: 1vh 0;
+}
+.score > *:first-child {
+  text-align: right;
+}
+
+html {
+  background: url("/sass/starw.JPEG") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.item-1 {
+  width: 20px;
+}
+
+.item-2 {
+  width: 40px;
+}
+
+.item-3 {
+  width: 60px;
+}
+
+.item-4 {
+  width: 80px;
+}
+
+.item-5 {
+  width: 100px;
+}
+
+.text-purple {
+  color: "purple";
+}/*# sourceMappingURL=index.css.map */

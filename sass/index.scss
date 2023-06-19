@@ -1,0 +1,90 @@
+// Partial Files
+@import 'variables';
+@import 'mixins';
+// @import 'error-handling';
+
+
+// Functions
+@function calculate-position($value) {
+    @return calc(#{$value} * 1vw);
+}
+
+@function calculate-percentage($value, $total) {
+    @return ($value / $total) * 100%;
+}
+
+// Top-level selectors
+*,
+::after,
+::before {
+    box-sizing: $box-sizing;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+    overflow: hidden;
+}
+
+.paddle {
+    @include paddle-styling($left-offset, 0 0 60px 10px #ffffff, 0 0 100px 60px rgb(0, 4, 255), 0 0 140px 90px rgba(8, 0, 255, 0.389));
+}
+
+.paddle.left {
+    left: $left-offset;
+}
+
+.paddle.right {
+    right: $right-offset;
+    @include box-shadow(0 0 60px 10px #fff, 0 0 100px 60px rgb(255, 0, 30), 0 0 140px 90px rgb(255, 0, 0));
+}
+
+.ball {
+    position: absolute;
+    background-color: $ball-color;
+    left: calculate-position($x);
+    top: calculate-position($y);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: $ball-size;
+    height: $ball-size;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: $score-font-size;
+    color: white;
+    
+    >* {
+        @include score-item;
+        
+        &:first-child {
+            text-align: right;
+        }
+    }
+}
+
+html {
+    background: $image-url no-repeat center center fixed; // Image background property
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+// Flow Control Directives
+@for $i from 1 through 5 {
+    .item-#{$i} {
+        width: 20px * $i;
+    }
+}
+
+@each $color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+}
